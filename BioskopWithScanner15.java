@@ -28,7 +28,15 @@ public class BioskopWithScanner15 {
                     System.out.print("Masukkan kolom (1-2): ");
                     kolom = sc.nextInt();
                     sc.nextLine();
-            
+                
+                    if (baris > 0 && baris <= 4 && kolom > 0 && kolom <= 2) {
+                        penonton[baris - 1][kolom - 1] = nama;
+                        System.out.println("Data berhasil disimpan.");
+                    } else {
+                        System.out.println("Posisi baris atau kolom tidak tersedia.");
+                    }
+                    break;
+                    
                 case 2:
                 System.out.println("=== Dafatar Penonton ===");
                 for (int i = 0; i < penonton.length; i++) {
